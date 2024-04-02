@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #1f242d;
+}
+body{
+    background-image: linear-gradient(rgb(69, 69, 69), black 75%);
+}
+.nav-head{
+    padding: 11px;
+    margin-left: 6vw;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.nav-head span{
+    font-size: 25px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+    font-weight: 600;
+    color: white;
+    
+}
+.main{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    /* height: 90vh; */
+    /* background-color: #1f242d; */
+    /* background-image: linear-gradient(rgb(69, 69, 69), black 75%); */
+    margin-top: 20px;
+    background-color: transparent;
+    position: fixed;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav{
+    display: flex;
+}
+.nav-list ul{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    margin-right: 10vw;
+    margin-left: 31vw;
+    padding: 11px;
+
+}
+.nav-list ul li{
+    list-style: none;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: white;
+    transition: .3s;
+    animation: slideTop 0.9s ease forwards;
+}
+.nav-list ul li:hover{
+    color: aqua;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+}
+.txt{
+    color: white;
+    width: 50%;
+    padding: 30px;
+    margin-left: 5vw;
+    margin-top: 8vh;
+}
+.txt h1{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: white;
+}
+.txt h2{
+    opacity: 0;
+    animation: slideBottom 0.5s ease forwards;
+    animation-delay: 0.7s;
+}
+.para{
+    margin-top: 5vh;
+}
+.picture{
+    margin-top: 12vh;
+    margin-left: 5vw;
+}
+.picture img{
+    width: 22vw;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImg 4s ease forwards;
+    animation-delay: 1s, 2s;
+}
+.color-E{
+    display: flex;
+    opacity: 0;
+    animation: slideBottom 0.5s ease forwards;
+    animation-delay: 0.7s;
+}
+.color-E span{
+    color: aqua;
+    margin-left: 8px;
+    margin-top: 6px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.color-E h2{
+    color: white;
+    margin-left: 8px;
+    margin-top: 6px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.active{
+    color: aqua;
+}
+.links{
+    margin-top: 5vh;
+}
+.links ul{
+    display: flex;
+}
+.links ul li{
+    list-style-type: none;
+    gap: 2vw;
+}
+.links ul li img{
+    width: 2vw;
+    margin-left: 0.8vw;
+    cursor: pointer;
+
+}
+.links ul li img:hover{
+    transform: translateY(-5px);
+    transition: 0.2s ease-in-out;
+}
+.btn button{
+    margin-top: 4vh;
+    margin-left: 2vw;
+    padding: 12px;
+    background-color: aqua;
+    border: none;
+    border-radius: 21px;
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    animation: btn 0.5s ease forwards;
+    animation-delay: 1s;
+}
+.btn button:hover{
+    box-shadow: 0 0 10px aqua;
+}
+    
+.about_me{
+    display: flex;
+}
+/* KeyFrames Animation */
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0%{
+        transform: translateY(500px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes floatImg{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes btn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
